@@ -23,13 +23,13 @@ var PROJECTS=[
  {slug:"fundall",cs:CASES["fundall"],name:"Fundall",org:"Fundall Technologies",kind:"Fintech super app",tags:["Mobile","Onboarding","Fintech"],
   summary:"Tackling the rising number of inactive users at Fundall, a super app for the unbanked, by rebuilding onboarding around the one field people kept abandoning.",
   meta:[["Role","Product Designer"],["Company","Fundall Technologies, Emerging Africa Group"],["Year","2022–2023"],["Platform","Mobile app"],["Team","Product team, QA and key stakeholders"]],},
- {slug:"keys-community",cs:CASES["keys-community"],name:"Keys",org:"Keys Community, London",kind:"Community platform",tags:["Residential","Community","Two-sided"],
-  summary:"Shaping a complex, two-sided community platform into a first version a small team could ship, designing for residents and vendors together.",
-  meta:[["Role","Product Designer"],["Company","Keys Community"],["Location","London"],["Year","2025–2026"],["Platform","Mobile app"]],},
+ {slug:"keys-community",cs:CASES["keys-community"],name:"Keys",org:"Keys Community, London",kind:"Community platform · proof of concept",tags:["Proof of concept","Residential","Two-sided"],
+  summary:"Taking an idea to a proof of concept: a two-sided community platform that serves residents and service providers, shaped into a first version a small team could build.",
+  meta:[["Role","Product Designer"],["Company","Keys Community"],["Location","London"],["Stage","Proof of concept"],["Year","2025–2026"],["Platform","Mobile app"]],},
  {slug:"aptap",cs:CASES["aptap"],name:"Aptap",org:"Aptap",kind:"Broadband deal results",tags:["Conversion","Decision support","AI-supported workflow"],
   summary:"Turning completed broadband quotes into confident deal decisions: redesigning the deal results page Aptap embeds in UK banking apps from a product catalogue into a decision-support experience.",
   meta:[["Role","Product Designer"],["Company","Aptap"],["Workflow","Figma with MCP, Claude, PRD"],["Platform","Embedded in UK banking apps"],["Year","2026"]],},
- {slug:"baci",cs:CASES["baci"],name:"Baci",org:"Self-initiated",kind:"AI personal finance",tags:["AI agent","Multi-account","Working prototype"],
+ {slug:"baci",cs:CASES["baci"],name:"Baci",org:"Self-initiated",kind:"AI personal finance",tags:["AI agent","Open Banking","Working prototype"],
   summary:"Ensuring financial awareness and control through AI: connecting all of a person's accounts into one picture, with an agent that explains, forecasts and models decisions in plain language.",
   meta:[["Role","Product Designer"],["Type","Self-initiated exploration"],["Year","2026"],["Platform","Mobile"],["Deliverables","PRD, FRD, Figma file, working prototype"]],}
 ];

@@ -522,7 +522,6 @@ body.paged .sheet{box-shadow:0 24px 60px -24px rgba(0,0,0,.55)}
 .tab[aria-current="page"]{background:var(--sheet);color:var(--ink)}
 /* the fixed sound button sits over the bar's left edge once the page column reaches the viewport edge */
 @media (max-width:1200px){body.paged .bar{padding-left:52px}}
-@media (max-width:480px){.tabs{padding-left:4px;gap:2px}.tab{padding:8px 8px;font-size:.76rem}}
 .sheet{position:relative;background:var(--sheet);border:1px solid var(--line-soft);border-radius:0 14px 14px 14px;padding-block:clamp(28px,5vw,56px);padding-inline:clamp(18px,5vw,64px);display:grid;gap:56px}
 .sheet > *{min-width:0}
 .auditnote{display:none;gap:12px;align-items:baseline;flex-wrap:wrap;border:1px dashed var(--accent);background:var(--accent-tint);border-radius:8px;padding:10px 14px;font-size:.9rem;margin-bottom:-24px}
@@ -751,8 +750,6 @@ section p{max-width:66ch}
 .cs-body .cs-meta > div:not(.wide) dd{text-align:left;hyphens:manual}
 .cs-body .cs-sec > p,.cs-body .cs-list,.cs-body .cs-design dd{max-width:none}
 @media (max-width:1000px){.cs{grid-template-columns:minmax(0,1fr)}.cs-toc{display:none}}
-/* the large lede can't justify cleanly in a phone-width column, so it falls back to ragged right */
-@media (max-width:560px){.case-head .lede{text-align:left}}
 @media (max-width:700px){.cs-kau,.cs-why,.cs-val,.cs-out{grid-template-columns:minmax(0,1fr)}.cs-val li::after{display:none}.cs-design > div{grid-template-columns:minmax(0,1fr);gap:4px}.cs-body{gap:52px}}
 .next{display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;border-top:1px solid var(--line-soft);padding-top:22px}
 .next strong{font-family:var(--display);font-size:1.4rem;font-weight:650;letter-spacing:-.02em}
@@ -809,3 +806,26 @@ section p{max-width:66ch}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* ---------- mobile gate: the portfolio is desktop-only ---------- */
+.mgate{display:none;position:fixed;inset:0;z-index:9999;overflow-y:auto;background:radial-gradient(120% 70% at 50% 0%,#1d2130 0%,var(--paper) 60%);color:var(--ink);font-family:var(--body);padding:32px 24px;align-items:flex-start;justify-content:center}
+.mgate-in{margin:auto;width:100%;max-width:400px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
+.mgate-who{font-size:13px;line-height:1.5;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 0 28px}.mgate-who span{display:block}
+@media (max-height:500px){.mgate{padding:20px 24px}.mgate-who{margin-bottom:14px}.mgate-art{width:120px;margin-bottom:14px}.mgate h1{font-size:24px}.mgate p{margin-bottom:18px}}
+.mgate-art{width:190px;height:auto;margin:0 0 28px;color:var(--accent)}
+.mgate-art .mg-dim{color:var(--line)}
+.mgate h1{font-family:var(--display);font-size:28px;line-height:1.15;font-weight:650;letter-spacing:-.01em;margin:0 0 12px;text-wrap:balance}
+.mgate p{font-size:16px;line-height:1.55;color:var(--muted);margin:0 0 28px;text-wrap:pretty}
+.mgate-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:48px;border-radius:999px;border:1px solid var(--line-soft);background:var(--sheet);color:var(--ink);font:600 15px/1 var(--body);text-decoration:none;cursor:pointer;transition:background .2s,border-color .2s}
+.mgate-btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.mgate-btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.mgate-btn svg{width:18px;height:18px;flex:none}
+.mgate-row{display:flex;gap:10px;width:100%;margin-top:10px}
+.mgate-row .mgate-btn{flex:1}
+.mgate-msg{min-height:20px;margin-top:12px;font-size:14px;color:var(--ok)}
+@media (max-width:899px),(hover:none) and (pointer:coarse) and (max-width:1000px),(hover:none) and (pointer:coarse) and (max-height:500px){
+  .mgate{display:flex}
+  .wrap{display:none!important}
+  body{padding:0;overflow:hidden}
+}
+@media (prefers-reduced-motion:no-preference){.mgate-art .mg-cur{animation:mgblink 1.2s steps(2,start) infinite}@keyframes mgblink{to{visibility:hidden}}}

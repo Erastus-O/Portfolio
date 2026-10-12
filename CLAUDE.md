@@ -49,6 +49,8 @@ Serve the folder over HTTP rather than opening `index.html` as a file. Audio, th
    - When a page is open, `cabView` is set `inert`.
    - Keep all of this intact.
 
+9. **Desktop only.** Phones and small touch screens see `#mgate` ("Best explored on a computer") instead of the site. It's shown by a media query in `styles.css` (max-width 899px, or a touch screen up to 1000px wide or under 500px tall), which hides `.wrap`. There's no "continue anyway" option, on purpose. The copy-link handler is at the end of `app.js`.
+
 ## File map
 
 ```
@@ -119,7 +121,7 @@ Every case study follows the same **14-section structure**. It is defined in `CS
 - **`hideSections: [9, 11]`** removes whole sections by index. The TOC and the section numbers re-sequence automatically through `csNum(n)`.
 - **`stats: [[value, label], …]`** gives the metric boxes. **`statsNote`** is the small line shown above them, e.g. "First month after release".
 - **`heroImg: {src, w, h, alt, cap}`** is the hero image. `src` can be a path or a key in `CS_IMG`.
-- **Design rows: `design: [[label, text, {src,w,h,alt,cap}?]]`.** The optional third item puts that screenshot inside the row.
+- **Design rows: `design: [[label, text, img?]]`.** The optional third item (one image object `{src,w,h,alt,cap}` or an array of them) puts those screenshots inside the row.
   - Rows sort by a fixed order list in `projectPage`; labels not in it, which is most custom names, keep their given order first.
   - Unless they are listed in **`hideDesign`**, the default rows (Flows, IA, UI, Interactions, States, Accessibility, Responsive) are auto-added as `{Add …}` placeholders.
   - All five current cases hide every default and use custom row names.

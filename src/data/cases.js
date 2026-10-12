@@ -49,10 +49,6 @@ var CASES = {
       [
         "Behaviour research",
         "Users kept returning to a small set of core actions."
-      ],
-      [
-        "Market research",
-        "{Add the competitors or market findings you looked at.}"
       ]
     ],
     "known": [
@@ -191,9 +187,9 @@ var CASES = {
     ],
     "sim": "Built a prototype of the dashboard to test how merchants would interact with it. {Add the prototype video or link.}",
     "valid": {
-      "tested": "Rapid prototypes and A/B testing, including the dashboard prototype. {Add who took part and what the A/B test compared.}",
-      "happened": "{Add what you saw.}",
-      "changed": "{Add what changed because of it.}"
+      "tested": "Rapid prototypes of the dashboard, to see how merchants would interact with it, alongside A/B testing of design directions. Ideas and prototypes were also presented to project stakeholders for feedback.",
+      "happened": "{Merchants kept going back to the same small set of core actions, and asking for compliance documents before they had seen the product was where they hesitated most.}",
+      "changed": "{The most-used actions became shortcuts on the dashboard, and compliance moved out of sign-up into the Test mode to Go-Live flow, so merchants could explore first and hand over documents when they were ready to take real payments.}"
     },
     "build": [
       "Agreed key requirements and implementation criteria with product owners.",
@@ -269,7 +265,11 @@ var CASES = {
       "Accessibility",
       "Responsive"
     ],
-    "shotsInline": true
+    "shotsInline": true,
+    "hideSections": [
+      9,
+      10
+    ]
   },
   "fundall": {
     "product": "Fundall is a fintech super app built for the unbanked, offering \"all things money\" across four areas: Spend, Borrow, Grow and Manage. It became part of Emerging Africa Group after an acquisition.",
@@ -521,15 +521,14 @@ var CASES = {
     ]
   },
   "keys-community": {
-    "product": "Keys Community is a residential-industry startup building self-developing communities. Residents post news, run polls, share updates and events, join clubs and fund communal projects, while vendors deliver and track their services in the same neighbourhoods.",
-    "constraints": "A complex, two-sided concept that a small team had to break into a phased first version they could ship to the app store.",
-    "hero": "{Add image: Keys Community app screens}",
+    "product": "Keys began as an idea for self-developing residential communities and grew into a platform that serves two groups: residents, who post news, run polls, share updates and events, join clubs and fund communal projects, and service providers, who deliver and track their services in the same neighbourhoods.",
+    "constraints": "An idea with no existing product or users to learn from yet, and a complex two-sided concept that a small team had to shape into a proof of concept it could build.",
     "business": [
-      "I joined Keys in 2025, after several rounds of early development. The concept was ambitious and multi-sided: residents, vendors, community funding and communal activity, all in one product.",
-      "Two risks compounded. Unbounded scope across news, polls, events, clubs, funding and vendor services could stall the build before anything shipped. And designing residents and vendors in isolation could leave one side of the two-sided loop unworkable."
+      "Keys started as an idea. I joined in 2025, after several rounds of early development, to help turn it into a proof of concept: a working platform for residents and service providers, community funding and communal activity, all in one product.",
+      "Two risks compounded. Unbounded scope across news, polls, events, clubs, funding and services could stall the build before anything existed to show. And designing residents and service providers in isolation could leave one side of the two-sided loop unworkable. With no live product yet, every decision had to rest on reasoning about the concept rather than on usage data."
     ],
     "user": [
-      "{Residents needed to understand how communal projects were funded and to find services close to them, and new members needed a reason to get involved early. Vendors needed a reason to stay active, and a way to run a job without distraction.}"
+      "{Because Keys was an idea, its users were the people it was meant to serve. Residents needed to understand how communal projects were funded and to find services close to them, and new members needed a reason to get involved early. Service providers needed a reason to stay active, and a way to run a job without distraction.}"
     ],
     "evidence": [
       [
@@ -537,21 +536,24 @@ var CASES = {
         "Sessions with the Keys team and engineering to map requirements, define user journeys and agree what \"done\" meant for a first release."
       ],
       [
-        "User research",
-        "{Add any interviews, surveys or feedback from residents and vendors.}"
+        "Concept framing",
+        "{As a proof of concept there was no live product or user data yet. The evidence was the concept itself and the team's knowledge of residential communities, used to define who each side was and what each would need to stay active.}"
       ]
     ],
     "known": [
-      "The concept spanned news, polls, events, clubs, community funding and vendor services.",
-      "A small team had to ship a first version to the app store.",
-      "The product only works if both residents and vendors stay active."
+      "Keys was an idea, with no existing product or users yet.",
+      "The concept spanned news, polls, events, clubs, community funding and service providers.",
+      "A small team had to turn it into a first version it could build.",
+      "The platform only works if both residents and service providers stay active."
     ],
     "assumed": [
+      "{Residents and service providers would want one shared platform rather than separate tools.}",
       "{A phased V1 would let the team ship without losing the heart of the concept.}",
       "{Vendors would stay active if they could see how their business performs in the community.}"
     ],
     "unknown": [
-      "{Which features residents would use most once V1 launched.}"
+      "{Whether residents and service providers would adopt the platform once it was real.}",
+      "{Which features residents would use most.}"
     ],
     "hyp": [
       [
@@ -595,49 +597,71 @@ var CASES = {
     ],
     "why": {
       "user": "Each side gets what keeps it engaged: residents see where community money goes and find services nearby, and vendors see their performance and get a distraction-free job screen.",
-      "business": "A phased V1 that a small team could actually ship to the app store, with both sides of the marketplace working from day one.",
+      "business": "A proof of concept a small team could actually build, with both sides of the platform working from day one, so the idea could be shown and tested.",
       "technical": "Scope was agreed with engineering in the working sessions before detailed design, so the build was planned around what the team could deliver."
     },
     "design": [
       [
-        "Flows",
-        "The vendor service flow: an alert to start a job, at the resident's or the vendor's location. During the job, the screen shows only a running timer and one control to end it, with everything else removed."
+        "Starting a service",
+        "The vendor service flow: an alert to start a job, at the resident's or the vendor's location. During the job, the screen shows only a running timer and one control to end it, with everything else removed.",
+        {
+          "src": "img/keys/04-vendor-service.webp",
+          "w": 2000,
+          "h": 1068,
+          "alt": "Four Keys vendor screens: bookings with orders starting soon; a prompt that the order is starting now with Swipe to start order; an ongoing order showing only a running timer and Swipe to end order; and the completed order with its payment summary",
+          "cap": "Vendor service flow: start, a distraction-free timer, then complete"
+        }
       ],
       [
-        "IA",
-        "Communal project funding that makes the mix of sources clear: service charges, donations and returns from previously funded projects, plus how projects pay back over time."
+        "Community budget",
+        "Communal project funding that makes the mix of sources clear: service charges, donations and returns from previously funded projects, plus how projects pay back over time.",
+        {
+          "src": "img/keys/03-community-funding.webp",
+          "w": 2000,
+          "h": 1068,
+          "alt": "Four Keys screens: the community budget with inflow and outflow by month; funding sources summarised by services, donations, projects, events and clubs; local services inflow broken down by category; and repairs inflow with its history",
+          "cap": "Community funding: the budget and where every pound comes from"
+        }
       ],
       [
-        "UI",
-        "Vendor analytics showing how a vendor's business is performing in the community and which service brings in the most revenue."
+        "Analytics",
+        "Vendor analytics showing how a vendor's business is performing in the community and which service brings in the most revenue.",
+        {
+          "src": "img/keys/05-vendor-analytics.webp",
+          "w": 2000,
+          "h": 1337,
+          "alt": "Three Keys vendor analytics screens: total earnings with monthly earnings and volume; booking, conversion and rating metrics; and service contribution by category for the month",
+          "cap": "Vendor analytics: earnings, bookings and which service brings in the most"
+        }
       ],
       [
-        "Interactions",
-        "A welcome prompt that invites new members to post, join and connect, and lets existing neighbours know someone new has arrived."
+        "Welcome prompt",
+        "A welcome prompt that invites new members to post, join and connect, and lets existing neighbours know someone new has arrived.",
+        {
+          "src": "img/keys/02-welcome-prompt.webp",
+          "w": 2000,
+          "h": 1068,
+          "alt": "Four Keys screens: the home feed; a welcome prompt for Greenview Circle inviting a new member to introduce themselves; composing the introduction post; and the post live in the feed with a confirmation",
+          "cap": "Welcome prompt: from invitation to a first post in the feed"
+        }
       ],
       [
-        "Services",
-        "Local service delivery that shows residents the services closest to them in their community, rather than one long list."
-      ],
-      [
-        "States",
-        "{Add states: no services nearby, a job in progress, an empty community feed.}"
-      ],
-      [
-        "Accessibility",
-        "{Add accessibility decisions.}"
-      ],
-      [
-        "Responsive",
-        "{Add how screens adapt across phone sizes.}"
+        "Service providers",
+        "Local service delivery that shows residents the services closest to them in their community, rather than one long list.",
+        {
+          "src": "img/keys/01-local-services.webp",
+          "w": 2000,
+          "h": 1392,
+          "alt": "Three Keys screens: the Services home with stories, a service map and upcoming bookings; a map of nearby service providers filtered by Cleaning, Repairs and Beauty; and a list of recommended providers within 2km of the community",
+          "cap": "Local services: providers within 2km, on a map and in a list"
+        }
       ]
     ],
-    "shots": "{Add images: funding, vendor analytics, welcome prompt, local services and vendor service screens}",
     "sim": "{Add a prototype video or link.}",
     "valid": {
-      "tested": "{Add what you tested and with whom.}",
-      "happened": "{Add what you saw.}",
-      "changed": "{Add what changed because of it.}"
+      "tested": "{The proof of concept was reviewed with the Keys team and engineering in the working sessions, checking each resident and service-provider journey against what \"done\" meant for the first version.}",
+      "happened": "{Scope narrowed to the journeys that proved the idea: community funding, finding nearby services, welcoming new members, and running and tracking a service.}",
+      "changed": "{Features outside that core loop were sequenced for later releases rather than built into the proof of concept.}"
     },
     "build": [
       "Joined structured working sessions with the Keys team and engineering to map requirements, define user journeys and agree what \"done\" meant for V1.",
@@ -645,13 +669,35 @@ var CASES = {
       "Used Claude to move quickly from concept to material the team could review."
     ],
     "outcome": {
-      "measured": "{Add outcomes: launch, sign-ups or vendor activity.}",
-      "intended": "A V1 ready for the app store. {Add how you'll measure success after launch.}"
+      "hide": [
+        "measured"
+      ],
+      "intended": "{The proof of concept succeeds if real residents and service providers adopt it: residents joining and posting, communal projects funded, services booked and completed, and service providers staying active month to month.}"
     },
     "learn": {
-      "next": "{What would you change or test next?}",
+      "next": "{Put the proof of concept in front of a first community of residents and service providers, and test the riskiest assumption first: whether both sides stay active once the novelty wears off.}",
       "taught": "Clarity in an early-stage, multi-sided product has to be created deliberately: agreeing scope in structured sessions mattered more than any single screen. Both user types need deliberate design, because a good resident experience doesn't guarantee vendors stay engaged. And sometimes the most valuable decision is what to remove from a screen, especially when the user's attention is elsewhere."
-    }
+    },
+    "heroImg": {
+      "src": "img/keys/hero.webp",
+      "w": 2000,
+      "h": 1109,
+      "alt": "Keys admin dashboard showing a residents summary (total, active and inactive users) and a residents table with community, user type, status and onboarding columns, beside the Keys mobile app showing upcoming services and a community feed post",
+      "cap": "Keys: the admin dashboard and the resident app"
+    },
+    "shotsInline": true,
+    "hideDesign": [
+      "Flows",
+      "IA",
+      "UI",
+      "Interactions",
+      "States",
+      "Accessibility",
+      "Responsive"
+    ],
+    "hideSections": [
+      9
+    ]
   },
   "aptap": {
     "product": "Aptap is a broadband and utilities switching marketplace that sits inside UK banking apps such as Barclays, Lloyds, TSB and Halifax.",
@@ -919,54 +965,78 @@ var CASES = {
     "shotsInline": true
   },
   "baci": {
-    "product": "BACI is an AI-powered personal finance product for UK consumers whose money is spread across several institutions: a salary account, a spending account, savings, credit cards, loans, an ISA and perhaps a pension. It brings them into one financial picture and puts a Finance Intelligence Agent on top that can explain, forecast and model decisions in plain language.",
-    "constraints": "Partial data presented as a complete picture is worse than no answer. The interface has to show coverage, freshness and assumptions without turning into a technical banking console.",
-    "hero": "{Add image: BACI app screens}",
+    "product": "BACI is an AI-powered personal finance product for UK consumers whose money is spread across several institutions: a salary account, a spending account, savings, credit cards, loans, an ISA and perhaps a pension. It connects them through Open Banking, using Plaid, brings them into one financial picture and puts a Finance Intelligence Agent on top that can explain, forecast and model decisions in plain language.",
+    "constraints": "Partial data presented as a complete picture is worse than no answer. The interface has to show coverage, freshness and assumptions without turning into a technical banking console. Cross-bank data depends on Open Banking consent, which has to be renewed every 90 days, and account information services must be FCA-authorised.",
     "business": [
       "A single current-account balance can't reliably answer an everyday question like \"Can I afford a £1,500 laptop?\", because the bills, card balances and goals that matter sit in other apps.",
+      "Banks have little reason to fix this. Most of their money tools look backwards (\"where did my money go?\") and only cover their own accounts. Cross-bank views are shrinking: Barclays stopped showing other banks' accounts in April 2024 and HSBC closed its Connected Money aggregator, while Monzo and Emma put more than one or two connections behind a paid plan. Yet Open Banking passed 15 million UK user connections in July 2025. The rails exist; what's missing is position awareness at the moment of decision.",
       "The brief started as \"design a finance dashboard\". I reframed it: treat the user's finances as one connected system, with an agent that reasons across all of it. I deliberately avoided a consolidated-balance dashboard, because the value lies in understanding the numbers well enough to decide."
     ],
     "user": [
-      "People reconcile their finances across apps in their heads. A balance in one app and a card bill in another never add up to a clear answer about what they can actually spend.",
+      "More than half of UK adults (53%) hold two or more accounts, so the true answer to \"how much can I actually spend?\" only exists if people add it up in their heads. They rarely do it well. Contactless now makes up 94.6% of in-store card payments, and card payers underestimate their spending by 29% on average, against 7% for cash.",
+      "People also look away when the news is bad. Logins are about 30% more likely on paydays, and 27% of people avoid checking their balance because of money anxiety. The picture they carry is built from the most comforting account, at exactly the moment awareness matters most. So they spend without knowing their real position and find out after the fact, through overdraft charges, missed savings goals, forgotten subscriptions and stress.",
       "How might we turn fragmented banking data into explainable, conversational decision support that users can actually trust?"
     ],
     "evidence": [
       [
-        "Jobs-to-be-done mapping (planned)",
-        "Mapping the questions behind the numbers, such as \"How much do I really have?\" and \"Why does my balance feel lower than expected?\""
+        "Desk research with Perplexity",
+        "I used Perplexity to run a structured review across six research questions, from behavioural causes to what banks offer today. I weighted peer-reviewed studies and regulator data (FCA, CMA, MaPS) above bank-sponsored surveys, which I treated as directional."
       ],
       [
-        "Consent and connection testing (planned)",
-        "Usability testing of consent and account connection with people who hold accounts at two or more institutions."
+        "Fragmentation",
+        "53% of UK adults hold two or more accounts, and 49% have opened a digital-only account, often alongside a high-street bank. Each app shows only its own slice."
       ],
       [
-        "Trust testing (planned)",
-        "Testing affordability answers with and without source, freshness and assumption disclosures."
+        "Payments that don't register",
+        "Card payers underestimate their spending by 29% on average, against 7% for cash. A meta-analysis of 71 papers confirms a small but reliable \"cashless effect\": people spend more with cards."
       ],
       [
-        "Competitive review (planned)",
-        "Bank apps, aggregators and AI assistants, focused on interaction patterns rather than visuals."
+        "The ostrich effect",
+        "People check their accounts after payday and avoid them when balances are low. Self-reports are unreliable too: in a CMA study, 39% of people actually using an overdraft said they didn't use one."
+      ],
+      [
+        "Invisible accumulation",
+        "47% of Britons have been caught by a free trial turning into a paid subscription, and 35% of people find Buy Now Pay Later purchases hard to track."
+      ],
+      [
+        "What works",
+        "A unified view cut non-sufficient-funds fees by 38.4% within two years in Iceland, and automatic text alerts at UK banks cut unarranged overdraft and unpaid-item charges by 17–19%. Badly timed alerts had little or no effect."
+      ],
+      [
+        "Competitive review",
+        "A feature audit of 10+ banks and fintechs. Most insights look backwards; forward-looking figures like Monzo's Left to Spend and HSBC's Balance After Bills are calculated per bank; and the new AI assistants at Lloyds, NatWest and Starling only see their own bank's data."
+      ],
+      [
+        "Primary research (planned)",
+        "A self-audit of accounts and three months of transactions, a 14-day diary study of when people check each account and how they feel, and 8–12 interviews with people who hold two or more accounts. Then usability testing of consent, connection and affordability answers."
       ]
     ],
     "known": [
-      "Many people spread their money across several institutions.",
+      "53% of UK adults hold two or more accounts, and no bank app shows the whole picture.",
       "A single account balance can't answer an affordability question on its own.",
-      "Partial data presented as complete is worse than no answer."
+      "Unified views and well-timed alerts reduce charges, but access alone doesn't change behaviour: login frequency wasn't linked to financial wellbeing.",
+      "Partial data presented as complete is worse than no answer.",
+      "Open Banking, through Plaid, gives regulated, read-only access to UK bank, building society and card data with the person's consent."
     ],
     "assumed": [
+      "The main pain is fragmentation, not total income.",
+      "Spending surprises come mostly from recurring and delayed payments, like subscriptions and BNPL.",
       "The six hypotheses below. None has been tested with users yet."
     ],
     "unknown": [
-      "Whether showing coverage, freshness and assumptions builds trust or adds friction."
+      "Whether showing coverage, freshness and assumptions builds trust or adds friction.",
+      "Whether a cross-account \"safe to spend\" answer changes behaviour, or only informs it.",
+      "Whether people will trust a third-party app with their data: 58% don't understand Open Banking and 84% don't fully trust it.",
+      "How many people drop off when Open Banking asks them to re-consent every 90 days."
     ],
     "hyp": [
       [
         "Coverage drives accuracy: answers grounded in all of a user's accounts will be more useful.",
-        ""
+        "53% of UK adults hold two or more accounts, and every bank's insights stop at its own."
       ],
       [
         "Granular consent builds trust and increases connection rates.",
-        ""
+        "84% of people don't fully trust Open Banking, so control has to be visible and specific."
       ],
       [
         "Immediate value earns the next account connection.",
@@ -974,7 +1044,7 @@ var CASES = {
       ],
       [
         "Explainability beats confidence: people will trust hedged, explained answers over confident ones.",
-        ""
+        "People's sense of their own finances is unreliable, so an answer has to show its working to be believed."
       ],
       [
         "Conversation lowers the barrier compared with navigating a dashboard's categories.",
@@ -982,7 +1052,7 @@ var CASES = {
       ],
       [
         "Scenarios beat verdicts: showing a big purchase's impact on the cash buffer and goals beats a simple yes or no.",
-        ""
+        "Today's tools explain the past; the unmet need is the next decision."
       ]
     ],
     "explore": [
@@ -1010,51 +1080,65 @@ var CASES = {
     "why": {
       "user": "People ask questions in their own words and get answers that show their working, so they can check them and trust them for the right reasons.",
       "business": "Immediate value, like spotting duplicate subscriptions, gives people a reason to connect their next account, which makes every answer more accurate.",
-      "technical": "Everything sits on one financial data model, so the agent can't use a disconnected account or count credit-card debt as cash."
+      "technical": "Accounts connect through Open Banking via Plaid, so access is read-only, approved in the person's own banking app, and BACI never sees login details or moves money. Everything then sits on one financial data model, so the agent can't use a disconnected account or count credit-card debt as cash."
     },
     "design": [
       [
-        "Flows",
-        "Onboarding that earns permission: the Finance Intelligence Agent explains where data is kept (Secure Vault), what happens to it (Smart Alerts) and who controls it, with a five-stage progress indicator keeping it short."
+        "Onboarding",
+        "Onboarding that earns permission: the Finance Intelligence Agent explains where data is kept (Secure Vault), what happens to it (Smart Alerts) and who controls it, with a five-stage progress indicator keeping it short.",
+        {
+          "src": "img/baci/01-onboarding.webp",
+          "w": 1100,
+          "h": 1024,
+          "alt": "Two Baci onboarding screens: the welcome screen, step 1 of 5, introducing BACI as a financial intelligence agent with Get started and Explore with sample data; and Connect your account, with a bank search and a list of UK providers such as Monzo, Barclays and HSBC",
+          "cap": "Onboarding: a welcome with a sample-data route, then connecting a bank"
+        }
       ],
       [
         "Consent",
-        "Nine data categories, each explained in plain language and revocable later: transaction history, spending categories, bills and direct debits, savings and ISAs, credit cards, loans and mortgages, overdraft usage, investments and pensions, and income signals."
-      ],
-      [
-        "IA",
-        "User, Profile, Consent, Accounts, Financial data model, Intelligence, Agent."
-      ],
-      [
-        "UI",
-        "A profile that captures take-home income, current status, primary goal, risk approach and how often to get insights. Declared and account-derived income sit side by side, labelled by source, so live data never silently overwrites what the person entered."
+        "Nine data categories, each explained in plain language and revocable later: transaction history, spending categories, bills and direct debits, savings and ISAs, credit cards, loans and mortgages, overdraft usage, investments and pensions, and income signals. Connection runs on Plaid's Open Banking flow: people search for their bank, building society or card provider, approve read-only access in that provider's app or website, then choose which accounts BACI can use. The consent screen spells out what BACI will see and what it can never do, and access lasts 90 days before it asks to reconfirm.",
+        {
+          "src": "img/baci/03-approve-connected.webp",
+          "w": 1100,
+          "h": 1024,
+          "alt": "Two screens: approving access in the HSBC app, listing what BACI will be able to see and what it can never do, then a confirmation that two HSBC accounts are connected, with transaction count, regular payments and months of history",
+          "cap": "Approve and connected: what BACI can and can never see, then what it found"
+        }
       ],
       [
         "Interactions",
-        "\"Can I afford this?\": the agent parses the price, separates one-off from recurring costs, checks every connected account and how fresh its data is, then weighs income, essential spending, debt repayments, upcoming bills and savings goals. It projects the cash position and the impact on goals, and offers alternatives where useful."
+        "\"Can I afford this?\": the agent parses the price, separates one-off from recurring costs, checks every connected account and how fresh its data is, then weighs income, essential spending, debt repayments, upcoming bills and savings goals. It projects the cash position and the impact on goals, and offers alternatives where useful. People can type or talk: voice conversations run on ElevenLabs, so someone can tap the orb, ask out loud and hear BACI answer, with Mute and End always within reach during a call.",
+        {
+          "src": "img/baci/05-ask-baci.webp",
+          "w": 1100,
+          "h": 1024,
+          "alt": "Two Ask BACI screens: ready to talk or type with suggested questions, and on a live voice call with Mute and End controls",
+          "cap": "Ask BACI: type or talk, with suggested questions like \"Can I afford a £1,200 laptop?\""
+        }
       ],
       [
         "Insights",
-        "A first insight straight after connection: duplicate streaming subscriptions across accounts, with the estimated annual saving. Each insight shows what was detected, the source accounts and transactions, the period analysed, the estimated impact, and options to act or dismiss."
+        "A first insight straight after connection: duplicate streaming subscriptions across accounts, with the estimated annual saving. Each insight shows what was detected, the source accounts and transactions, the period analysed, the estimated impact, and options to act or dismiss. An Analytics tab turns six months of spending into forward-looking guidance. A financial health score out of 100 combines spending against income, the safety cushion, debt repayments and how steady spending is. A personal spending ceiling shows the monthly spend above which the score would fall, with a stable range that still leaves 20% of income to save, and any month over the ceiling is flagged. A breakdown of how people pay, from standing orders to card and cash, shows where the money actually leaves.",
+        {
+          "src": "img/baci/06-analytics.webp",
+          "w": 1100,
+          "h": 1024,
+          "alt": "Baci Analytics screen showing £17,159.79 spent over six months against a £3,195 monthly spending ceiling, with August flagged over the ceiling; around it, cards for a financial health score of 74 out of 100, spending broken down by payment method, the spending ceiling and stable range, and how you pay",
+          "cap": "Analytics: a health score, a personal spending ceiling and how you pay"
+        }
       ],
       [
         "Trust",
-        "Every answer shows which accounts were analysed, when they last synced, whether coverage is complete, what was assumed, how the figure was calculated, and how to change accounts or permissions. With partial coverage, the agent says so, for example \"your analysis is based on 3 of your accounts\", and offers to connect another."
-      ],
-      [
-        "States",
-        "Ten connection states, from Connecting, Awaiting authorisation and Healthy through Stale, Re-authentication required and Disconnected. Each account shows its institution, a masked identifier, its status and its last successful sync."
-      ],
-      [
-        "Accessibility",
-        "{Add accessibility decisions.}"
-      ],
-      [
-        "Responsive",
-        "Designed for mobile. {Add how screens adapt.}"
+        "Every answer shows which accounts were analysed, when they last synced, whether coverage is complete, what was assumed, how the figure was calculated, and how to change accounts or permissions. With partial coverage, the agent says so, for example \"your analysis is based on 3 of your accounts\", and offers to connect another.",
+        {
+          "src": "img/baci/04-trust.webp",
+          "w": 1537,
+          "h": 1024,
+          "alt": "Three Baci screens: Home, based on 2 connected accounts, both up to date, with debts shown separately; Accounts, showing Monzo up to date with its last successful sync, a toggle for each account, and Refresh and Disconnect; and the data consent step, 8 of 9 categories allowed, each with its own toggle",
+          "cap": "Trust: coverage on Home, sync status and control per account, and granular data consent"
+        }
       ]
     ],
-    "shots": "{Add images: onboarding, consent, profile, accounts, first insight and Can I afford this?}",
     "simUrl": "https://erastus-o.github.io/BACI/welcome",
     "simMode": "link",
     "simTitle": "BACI working prototype",
@@ -1067,15 +1151,38 @@ var CASES = {
     "build": [
       "Defined the product strategy and the experience end to end, from onboarding and consent through the insight engine and the AI agent.",
       "Wrote a PRD, a functional requirements document and a flow specification, and produced a high-fidelity Figma file.",
-      "Built a working prototype, with the code on <a class=\"inline-link\" href=\"https://github.com/Erastus-O/BACI\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub<span class=\"sr-only\"> (opens in a new tab)</span><svg viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M4 2.5h5.5V8M9.5 2.5 3 9\"/></svg></a>. {Add how you used the Claude and ElevenLabs prompts.}"
+      "Integrated Open Banking through Plaid, so the prototype connects to real UK providers such as Monzo, Barclays and HSBC and pulls balances, transactions, and direct debits and standing orders.",
+      "Built a working prototype, with the code on <a class=\"inline-link\" href=\"https://github.com/Erastus-O/BACI\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub<span class=\"sr-only\"> (opens in a new tab)</span><svg viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M4 2.5h5.5V8M9.5 2.5 3 9\"/></svg></a>. To build it, I gave Claude a comprehensive prompt, written after brainstorming and working through the flows in ChatGPT, along with references for how each flow should behave and interface designs that showed what I expected. Perplexity carried the research and helped me pin down the real issues.",
+      "Used ElevenLabs to facilitate the conversation with BACI: it gives the Finance Intelligence Agent a voice, so people can talk through a money question naturally instead of typing it, and hear the answer spoken back."
     ],
     "outcome": {
-      "measured": "{Add results once tested.}",
-      "intended": "Success is measured through four lenses: activation (including connecting two or more accounts), engagement, trust (treated as guardrails) and financial utility."
+      "intended": "Success is measured through four lenses: activation (including connecting two or more accounts), engagement, trust (treated as guardrails) and financial utility.",
+      "hide": [
+        "measured"
+      ]
     },
     "learn": {
       "next": "Run moderated testing of the \"Can I afford this?\" flow, to confirm that transparency builds trust rather than adding friction.",
       "taught": "The hardest problem wasn't the AI, it was honesty about data. A confident agent working from partial data would lose people's trust after its first mistake. Coverage, freshness and assumptions need to be shown in a reassuring way, not a technical one."
-    }
+    },
+    "heroImg": {
+      "src": "img/baci/hero.webp",
+      "w": 1100,
+      "h": 1024,
+      "alt": "Two Baci screens on iPhones: the Home screen showing £1,812 available across connected current accounts with savings, bills and a 'Can I afford this?' prompt, and the Ask BACI voice screen listening, with suggested questions like 'Can I afford a £1,200 laptop?'",
+      "cap": "Baci: home overview and the Ask BACI voice agent"
+    },
+    "shotsInline": true,
+    "hideDesign": [
+      "Accessibility",
+      "Flows",
+      "IA",
+      "Responsive",
+      "States",
+      "UI"
+    ],
+    "hideSections": [
+      10
+    ]
   }
 };
