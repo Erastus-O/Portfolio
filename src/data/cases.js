@@ -15,6 +15,10 @@ var CASES = {
         "Merchants onboarded"
       ],
       [
+        "200,000+",
+        "Transactions processed"
+      ],
+      [
         "₦3B+",
         "Transaction value (about £1.7M)"
       ]
@@ -194,7 +198,7 @@ var CASES = {
       "The project team produced the output, and the business team turned it into outcomes and benefits."
     ],
     "outcome": {
-      "measured": "Within the first year of launch, Firstchekout processed over ₦3 billion (about £1.7M) in transaction value, with over 650 merchants onboarded. In the first month alone, 20 merchants onboarded and processed over 760 transactions worth over ₦85M (about £45k).",
+      "measured": "Within the first year of launch, Firstchekout processed over 200,000 transactions worth over ₦3 billion (about £1.7M), with over 650 merchants onboarded. In the first month alone, 20 merchants onboarded and processed over 760 transactions worth over ₦85M (about £45k).",
       "intended": "Over time: merchant retention, the number of successful transactions, the number of unsuccessful transactions, transaction value and customer lifetime value."
     },
     "learn": {
