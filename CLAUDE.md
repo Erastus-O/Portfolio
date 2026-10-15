@@ -62,6 +62,7 @@ src/app.js            Everything else, in one IIFE (see the section map below)
 vendor/three.min.js   three.js r128 (MIT), vendored so the site works offline
 fonts/                Inter Tight variable woff2 files (normal and italic)
 img/                  WebP images: aptap/, firstchekout/, fundall/, about/, cv/, gallery/, lagos/
+cv/                   The downloadable CV PDF (the "Download PDF" link in the CV viewer). Replace it and re-render img/cv/ pages together
 audio/                Voice intros (London, Lagos) and the TV clip
 proto/aptap/          Built Aptap prototype (Vite output, HashRouter, base "./"), embedded same-origin
 ```
