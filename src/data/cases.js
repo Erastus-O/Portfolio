@@ -11,19 +11,15 @@ var CASES = {
     "constraints": "FirstBank is highly regulated, so every merchant has to be validated against its compliance standards before taking real payments.",
     "stats": [
       [
-        "20",
+        "650+",
         "Merchants onboarded"
       ],
       [
-        "760+",
-        "Transactions processed"
-      ],
-      [
-        "₦85M+",
-        "Transaction value (about £45k)"
+        "₦3B+",
+        "Transaction value (about £1.7M)"
       ]
     ],
-    "statsNote": "First month after release",
+    "statsNote": "First year after launch",
     "business": [
       "During the 2020 pandemic, transaction activity on business accounts rose sharply, but the bank treated those transactions as routine rather than as a source of insight.",
       "Merchants used their FirstBank accounts for basic transactions and relied on other platforms to track how their business was doing. That put the bank at risk of losing account holders, and their transaction value, to competitors with better tools.",
@@ -198,7 +194,7 @@ var CASES = {
       "The project team produced the output, and the business team turned it into outcomes and benefits."
     ],
     "outcome": {
-      "measured": "In the first month after release: 20 merchants onboarded, over 760 transactions processed and over ₦85M (about £45k) in transaction value.",
+      "measured": "Within the first year of launch, Firstchekout processed over ₦3 billion (about £1.7M) in transaction value, with over 650 merchants onboarded. In the first month alone, 20 merchants onboarded and processed over 760 transactions worth over ₦85M (about £45k).",
       "intended": "Over time: merchant retention, the number of successful transactions, the number of unsuccessful transactions, transaction value and customer lifetime value."
     },
     "learn": {

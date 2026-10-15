@@ -843,7 +843,7 @@ function fileCard(p,i){
   return '<a class="file" href="#project-'+p.slug+'">'+mini(i,p.name.split(" ")[0])+'<span class="mono">'+p.org+' · '+p.kind+'</span><div class="tags">'+p.tags.map(function(t){return'<span>'+t+'</span>';}).join("")+'</div><h3>'+p.name+'</h3><p>'+F(p.summary)+'</p>'+fileStats(p)+'</a>';
 }
 var SELECTED=[
- {i:0,line:"FirstBank | Fintech | 2021",title:"Designing an all-round payment infrastructure for merchants across West Africa",blurb:"FirstBank\u2019s payment gateway for online merchants: onboarding, storefronts, payouts and a dashboard merchants actually check.",stats:[["\u20a685M+","Transaction value"],["760+","Transactions"]]},
+ {i:0,line:"FirstBank | Fintech | 2021",title:"Designing an all-round payment infrastructure for merchants across West Africa",blurb:"FirstBank\u2019s payment gateway for online merchants: onboarding, storefronts, payouts and a dashboard merchants actually check.",stats:[["\u20a63B+","Transaction value"],["650+","Merchants"]]},
  {i:1,line:"Fundall Technologies | Fintech | 2023",title:"Tackling the increasing rate of inactive users",blurb:"A super app for the unbanked. I rebuilt onboarding around the one field users kept abandoning on and turned it into a 1-minute flow.",stats:[["10%","Rise in active users"],["5 min \u2192 1 min","Onboarding time"]]},
  {i:4,line:"AI-induced workflow | 2026",title:"Ensuring Financial awareness and control with AI",blurb:"Baci is an AI-powered personal finance product that connects all of a user\u2019s bank and financial accounts, builds one consolidated picture of their money, and puts a financial intelligence agent on top of it that can explain, forecast and model decisions in plain language.",stats:[]}
 ];
