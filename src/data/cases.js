@@ -884,9 +884,12 @@ var CASES = {
     ],
     "sim": "A working prototype of the broadband marketplace. Enter a postcode to reach the redesigned deal results, then filter providers, compare deals and choose one.",
     "valid": {
-      "tested": "A three-way experiment plan: the current page (control) against Variant A, Best Match, and Variant B, Confidence & Clarity. Visitors are assigned server-side at their first view of the results page and stay in the same group for the session. The primary metric, quote complete to deal click, is tested at 95% confidence over at least one full weekly cycle, with click to switch complete as the guardrail.",
-      "happened": "The test hasn't run yet, so the PRD sets out how to read it. A lift with a high \"compare all\" expand rate confirms the overload theory. A lift with high FAQ and exit-fee engagement confirms the anxiety theory. A flat result suggests the drop-off sits before or after this page, so it's worth re-instrumenting before trying a third theory.",
-      "changed": "Variant B's exit-fee promise forced one change downstream: Switch Step 1 now asks for the current provider and contract end date, both skippable, and shows a non-blocking notice if the user may still be in contract, without adding a screen."
+      "tested": "A three-arm A/B test: the current results page (control) against Variant A- Best Match, and Variant B- Confidence & Clarity. Visitors are assigned on their first view of the results page and stay in that group for the session. The primary metric is the share of people who click a deal after getting a quote, tested at 95% confidence over at least one full week. Completed switches act as a guardrail, so a variant can’t win by attracting clicks that don’t convert.",
+      "happened": "The test hasn’t run yet, so the PRD defines what each outcome would mean. If a variant wins and many users expand “compare all”, choice overload was the problem. If it wins with high FAQ and exit-fee engagement, anxiety was the problem. If the result is flat, the drop-off probably happens before or after this page, so we’d add better tracking before testing a third theory.",
+      "changed": "Promising help with exit fees in Variant B meant we needed to know who was still in contract. So Switch Step 1 now asks for the user’s current provider and contract end date. Both questions can be skipped, and if the user may still be in contract, we show a gentle notice without adding an extra screen.",
+      "labels": {
+        "happened": "How we’d read it"
+      }
     },
     "build": [
       "Wrote a 10-page <a class=\"inline-link\" href=\"https://docs.google.com/document/d/1kLDZbqbKPLduGfOQwnmsKCnNpV_Gsu7BfX5dYVSddfw/edit?tab=t.0\" target=\"_blank\" rel=\"noopener noreferrer\">PRD<span class=\"sr-only\"> (opens in a new tab)</span><svg viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M4 2.5h5.5V8M9.5 2.5 3 9\"/></svg></a> with three personas, four epics with acceptance-criteria-level user stories, constraints and an assumptions section.",
