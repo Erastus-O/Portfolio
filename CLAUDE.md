@@ -29,7 +29,7 @@ Serve the folder over HTTP rather than opening `index.html` as a file. Audio, th
 ## Non-negotiable design rules
 
 1. **Dark mode only.** `data-theme="dark"` is forced, `isDark()` returns `true` and the light theme was removed on purpose. Do not add a theme toggle.
-2. **Inter Tight everywhere**, including canvas text. It is self-hosted in `fonts/` as variable woff2 files (weights 100 to 900, plus an italic). Do not add other typefaces or Google Fonts calls.
+2. **Sora everywhere**, including canvas text. It is self-hosted in `fonts/` as a variable woff2 file (weights 100 to 800, no italic). Inter Tight stays second in every font stack only as a fallback for characters Sora lacks: the naira sign (₦), arrows and Yoruba letters. The Lagos "Ẹ KÁÀBỌ̀" sign uses Inter Tight outright so one word doesn't mix two typefaces. Do not add other typefaces or Google Fonts calls.
 3. **Body text in case studies is justified** with hyphenation. `lang="en-GB"` sits on `.cs` and `.case-head`, so keep it there.
 4. **British English** throughout.
 5. **Draft markers.** Any text wrapped in `{curly braces}` is a draft or gap that Jesutofunmi has not approved.
@@ -60,7 +60,7 @@ src/data/cases.js     CASES: the case-study content for each project, plus CS_IM
 src/data/content.js   DRAWERS, INTRO, PROJECTS (index plus meta, linking to CASES[slug]) and ARTICLES
 src/app.js            Everything else, in one IIFE (see the section map below)
 vendor/three.min.js   three.js r128 (MIT), vendored so the site works offline
-fonts/                Inter Tight variable woff2 files (normal and italic)
+fonts/                Sora variable woff2 (main typeface, licence in Sora-OFL.txt), plus Inter Tight woff2 files (fallback)
 img/                  WebP images: aptap/, firstchekout/, fundall/, about/, cv/, gallery/, lagos/
 img/og-image.jpg      Link-preview thumbnail (1200x630 JPEG, not WebP, because some apps reject WebP previews). Set by the og: and twitter: tags in index.html
 cv/                   The downloadable CV PDF (the "Download PDF" link in the CV viewer). Replace it and re-render img/cv/ pages together

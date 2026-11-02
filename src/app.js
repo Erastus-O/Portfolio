@@ -317,9 +317,9 @@ function build3d(){
     var fd=canvasTex(w,H,4,function(x){
       var act=open===i;
       x.textAlign="center";x.textBaseline="middle";x.fillStyle=act?tok("--accent"):tok("--muted");
-      x.font='600 8px "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="1.4px";}catch(e){}
+      x.font='600 8px "Sora", "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="1.4px";}catch(e){}
       x.fillText(d.label,nx+nw/2+w/2,nd+12);
-      x.textAlign="right";x.fillStyle=tok("--muted");x.font='500 5.5px "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="0.6px";}catch(e){}
+      x.textAlign="right";x.fillStyle=tok("--muted");x.font='500 5.5px "Sora", "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="0.6px";}catch(e){}
       x.fillText(d.count,w-12,H-9);
     });
     var dm=new T3.MeshBasicMaterial({map:fd.tex,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
@@ -340,7 +340,7 @@ function build3d(){
         x.strokeStyle="rgba(26,29,35,0.16)";x.lineWidth=0.6;x.beginPath();
         x.moveTo(8,th+11);x.lineTo(cw-8,th+11);x.moveTo(8,th+19);x.lineTo(cw-30,th+19);x.stroke();
         x.fillStyle="#1a1d23";x.textAlign="center";x.textBaseline="middle";
-        x.font='600 5.6px "Inter Tight", "Helvetica Neue", Arial, sans-serif';x.fillText(label,t+tw/2,th/2+0.5);
+        x.font='600 5.6px "Sora", "Inter Tight", "Helvetica Neue", Arial, sans-serif';x.fillText(label,t+tw/2,th/2+0.5);
       });
       var cm=new T3.MeshBasicMaterial({map:cd.tex,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
       var pl=new T3.Mesh(new T3.PlaneGeometry(cw,hh),cm);pl.position.set(cw/2,hh/2,1.05);cg.add(pl);G.decals.push(cd);
@@ -400,8 +400,8 @@ function build3d(){
   var ct=canvasTex(BW,BD,5,function(x){
     x.strokeStyle="rgba(255,214,140,0.85)";x.lineWidth=0.5;x.strokeRect(6,6,BW-12,BD-12);
     x.fillStyle="#ffd68c";x.textAlign="center";x.textBaseline="middle";
-    x.font='600 7.5px "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="2.4px";}catch(e){}x.fillText("GALLERY",BW/2,BD/2-4);
-    x.font='500 4px "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="1px";}catch(e){}x.fillText("J. OLUWATOSIN",BW/2,BD/2+7);
+    x.font='600 7.5px "Sora", "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="2.4px";}catch(e){}x.fillText("GALLERY",BW/2,BD/2-4);
+    x.font='500 4px "Sora", "Inter Tight", "Helvetica Neue", Arial, sans-serif';try{x.letterSpacing="1px";}catch(e){}x.fillText("J. OLUWATOSIN",BW/2,BD/2+7);
   });
   var cd=new T3.Mesh(new T3.PlaneGeometry(BW,BD),new T3.MeshBasicMaterial({map:ct.tex,transparent:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2}));
   cd.rotation.x=-Math.PI/2;cd.position.set(0,BT/2+0.15,0);cover.add(cd);G.decals.push(ct);
@@ -446,14 +446,14 @@ function build3d(){
     x.fillStyle="#000";x.beginPath();x.roundRect?x.roundRect(W2/2-5,1.6,10,2.6,1.3):x.rect(W2/2-5,1.6,10,2.6);x.fill();
     var d=new Date(),hh=String(d.getHours()).padStart(2,"0"),mm=String(d.getMinutes()).padStart(2,"0");
     x.fillStyle="#fff";x.textAlign="center";x.textBaseline="alphabetic";
-    x.font='500 3px "Inter Tight", Arial, sans-serif';x.fillText(d.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}),W2/2,11);
-    x.font='600 11px "Inter Tight", Arial, sans-serif';x.fillText(hh+":"+mm,W2/2,22.5);
+    x.font='500 3px "Sora", "Inter Tight", Arial, sans-serif';x.fillText(d.toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long"}),W2/2,11);
+    x.font='600 11px "Sora", "Inter Tight", Arial, sans-serif';x.fillText(hh+":"+mm,W2/2,22.5);
     x.fillStyle="rgba(255,255,255,.82)";x.beginPath();x.roundRect?x.roundRect(2,31,W2-4,19,3):x.rect(2,31,W2-4,19);x.fill();
     x.fillStyle="#2d45d2";x.beginPath();x.roundRect?x.roundRect(4,33.2,5,5,1.4):x.rect(4,33.2,5,5);x.fill();
-    x.fillStyle="#fff";x.font='700 3px "Inter Tight", Arial';x.fillText("J",6.5,36.8);
-    x.textAlign="left";x.fillStyle="#111";x.font='700 2.6px "Inter Tight", Arial, sans-serif';x.fillText("OJ · Assistant",10.5,36.4);
-    x.fillStyle="#666";x.font='500 2.2px "Inter Tight", Arial';x.textAlign="right";x.fillText("now",W2-4,36.4);
-    x.textAlign="left";x.fillStyle="#222";x.font='500 2.4px "Inter Tight", Arial, sans-serif';
+    x.fillStyle="#fff";x.font='700 3px "Sora", "Inter Tight", Arial';x.fillText("J",6.5,36.8);
+    x.textAlign="left";x.fillStyle="#111";x.font='700 2.6px "Sora", "Inter Tight", Arial, sans-serif';x.fillText("OJ · Assistant",10.5,36.4);
+    x.fillStyle="#666";x.font='500 2.2px "Sora", "Inter Tight", Arial';x.textAlign="right";x.fillText("now",W2-4,36.4);
+    x.textAlign="left";x.fillStyle="#222";x.font='500 2.4px "Sora", "Inter Tight", Arial, sans-serif';
     x.fillText("📞 Incoming call…",4,42);x.fillText("Answer to hear about",4,45.2);x.fillText("Jesutofunmi's work.",4,48.4);
     x.fillStyle="rgba(255,255,255,.9)";x.beginPath();x.roundRect?x.roundRect(W2/2-6,H2-3,12,1,0.5):x.rect(W2/2-6,H2-3,12,1);x.fill();
   });
@@ -467,7 +467,7 @@ function build3d(){
   if(window.ResizeObserver)new ResizeObserver(function(){sizeTo();render3d();}).observe(svg);
   window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){applyTheme();render3d();});
   new MutationObserver(function(){applyTheme();render3d();}).observe(document.documentElement,{attributes:true,attributeFilter:["data-theme"]});
-  if(document.fonts&&document.fonts.load){Promise.all([document.fonts.load('600 16px "Inter Tight"'),document.fonts.load('500 16px "Inter Tight"')]).then(function(){redrawDecals();render3d();},function(){});}
+  if(document.fonts&&document.fonts.load){Promise.all([document.fonts.load('600 16px "Sora"'),document.fonts.load('500 16px "Sora"')]).then(function(){redrawDecals();render3d();},function(){});}
   return true;
 }
 function redrawDecals(){if(G)G.decals.forEach(function(d){d.redraw();});}
@@ -1590,7 +1590,7 @@ var NGV=(function(){
   b.fillStyle="#7a5232";b.fillRect(118,40,2,22);b.fillRect(150,40,2,22);
   b.fillStyle="#fff";b.fillRect(104,18,62,26);b.fillStyle="#2b8a3e";b.fillRect(104,18,62,9);
   b.fillStyle="#fff";b.font='700 6px "Inter Tight",Arial,sans-serif';b.textAlign="center";b.fillText("Ẹ KÁÀBỌ̀",135,25.5);
-  b.fillStyle="#9b2d3a";b.font='800 9px "Inter Tight",Arial,sans-serif';b.fillText("LAGOS",135,39);
+  b.fillStyle="#9b2d3a";b.font='800 9px "Sora", "Inter Tight",Arial,sans-serif';b.fillText("LAGOS",135,39);
   /* corrugated roofs and stall canopies */
   b.fillStyle="#8a8f96";for(var i=0;i<6;i++){b.beginPath();b.moveTo(i*36-6,226);b.lineTo(i*36+30,214);b.lineTo(i*36+34,236);b.lineTo(i*36-4,240);b.fill();}
   b.fillStyle="#6e6a4a";b.beginPath();b.moveTo(60,222);b.lineTo(140,222);b.lineTo(150,240);b.lineTo(50,240);b.fill();

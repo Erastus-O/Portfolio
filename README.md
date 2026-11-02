@@ -21,8 +21,8 @@ The site is fully static with no build step. Deploy the whole folder as-is to Gi
 - **Styles:** `src/styles.css`
 - **Behaviour:** `src/app.js`
 
-See **CLAUDE.md** for the architecture, the case-study data schema and the design rules (dark mode only, Inter Tight, `{draft}` markers).
+See **CLAUDE.md** for the architecture, the case-study data schema and the design rules (dark mode only, Sora, `{draft}` markers).
 
 ## Credits
 
-three.js r128 (MIT) is in `vendor/`. Inter Tight (SIL Open Font License) is in `fonts/`.
+three.js r128 (MIT) is in `vendor/`. Sora and Inter Tight (SIL Open Font License) are in `fonts/`.
